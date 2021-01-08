@@ -14,8 +14,8 @@ namespace Factory.Models
         public int EngineerId { get; set; }
 
         [DisplayName("Engineers Name")]
-        public string EngineertName { get; set; }
-        public virtual ICollection<EngineerMachine> JoinEntries { get; set; } //IColletion is basically a list. The ICollection<T> interface is the base interface for classes in the System.Collections.Generic namespace.
+        public string EngineerName { get; set; }
+        public virtual ICollection<EngineerMachine> JoinEntries { get; set; } 
     }
 }
 
