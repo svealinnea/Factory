@@ -1,21 +1,35 @@
 .container {
   background-color: grey;
 }
+a {
+  color: whitesmoke;
+}
+
+p {
+  text-align: center;
+  font-family: fantasy;
+}
 
 h1 {
+  font-family: fantasy;
   text-align: center;
 }
 
 h2 {
+  font-family: fantasy;
   text-align: center;
 }
 
 h3 {
+  font-family: fantasy;
   text-align: center;
 }
 
 h4 {
+  font-family: fantasy;
   text-align: center;
 }
 
-
+html {
+  text-align: center;
+}
