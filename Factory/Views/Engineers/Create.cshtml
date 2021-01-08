@@ -11,9 +11,9 @@
     @Html.LabelFor(model => model.EngineerName)
     @Html.TextBoxFor(model => model.EngineerName)
     
-    @* @Html.LabelFor(model => model.StartDate)
-    @Html.EditorFor(model => model.StartDate)
-    @Html.TextBoxFor(model => model.StartDate, new { @type = "date"})  *@
+    @Html.LabelFor(model => model.StartDate)
+    @* @Html.EditorFor(model => model.StartDate) *@
+    @Html.TextBoxFor(model => model.StartDate, new { @type = "date"}) 
 
     <input type="submit" value="Add new Engineer" />
 }

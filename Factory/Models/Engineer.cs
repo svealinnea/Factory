@@ -13,6 +13,10 @@ namespace Factory.Models
         }
         public int EngineerId { get; set; }
 
+        [DisplayName("Start Date")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd hh:mm tt}")]
+        public DateTime StartDate { get; set; }
+
         [DisplayName("Engineers Name")]
         public string EngineerName { get; set; }
         public virtual ICollection<EngineerMachine> JoinEntries { get; set; } 
