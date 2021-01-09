@@ -112,6 +112,90 @@ Then open MySQL Workbench and select the Local instance 3306 server. You will ne
 
 ### **Install/Setup Project**
 
+**Option 1** (download zip file)
+1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. 
+2) Download a .zip copy the repository by clicking on the large green "Code" button near the upper right corner of the screen.
+3) Right click the .zip file and extract(unzip) it's contents.
+4) Open your computer's terminal/console, and navigate to folder called "__Template.Solution__". 
+
+
+**Option 2** (via git console/terminal)
+1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
+2) Type the following line of code into your terminal/console to automatically download the project to your current directory and hit return/enter
+
+    <code>git clone https://github.com/RMGit-it/Template.Solution.git</code>
+
+3) Once the project has finished downloading, use the terminal/console to navigate to the “__Factory.Solution__" folder of the project.
+
+
+**Setup Database Connection**
+
+Create a new file in the root directory of the __Factory.Solution/ directory named "appsettings.json".  Copy and past the following code inside of the file.
+
+```
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=svea_wade;uid=YourId;pwd=YourPassword;"
+  }
+}
+```
+Replace "YourId" and "YourPassword" in the code above with the user id and user password you use for logging into MySQL Workbench.  Save the "appsettings.json" file.
+
+Type the following code and hit enter/return to install the necessary dependencies. 
+
+<code>dotnet restore</code>
+
+Once the dependencies have installed, type the following commands into your console, hitting enter/return after each.
+
+<code>dotnet ef migrations add Initial</code>
+
+<code>dotnet ef database update</code>
+
+
+You can now type the follow code to launch the program...
+
+<code>dotnet run</code>
+
+The program should launch using your default web browser at URL: localhost:5000.
+
+## SQL Schema
+
+
+```
+CREATE DATABASE  IF NOT EXISTS `svea_wade`
+USE `svea_wade`;
+ SET NAMES utf8 ;
+DROP TABLE IF EXISTS `EngineerMachine`;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `EngineerMachine` (
+  `EngineerMachineId` int(11) NOT NULL AUTO_INCREMENT,
+  `EngineerId` int(11) NOT NULL,
+  `MachineId` int(11) NOT NULL,
+  PRIMARY KEY (`EngineerMachineId`),
+  KEY `IX_EngineerMachine_EngineerId` (`EngineerId`),
+  KEY `IX_EngineerMachine_MachineId` (`MachineId`),
+  CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
+  CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `Engineers` (
+  `EngineerId` int(11) NOT NULL AUTO_INCREMENT,
+  `EngineerName` longtext,
+  `StartDate` datetime(6) NOT NULL DEFAULT '0001-01-01 00:00:00.000000',
+  PRIMARY KEY (`EngineerId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+DROP TABLE IF EXISTS `Machines`;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `Machines` (
+  `MachineId` int(11) NOT NULL AUTO_INCREMENT,
+  `MachineName` longtext,
+  `MachineFunctionality` longtext,
+  PRIMARY KEY (`MachineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+```
 
 ## Usage / Examples
 
