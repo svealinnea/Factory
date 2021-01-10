@@ -1,15 +1,25 @@
-.container {
+body{
   background-color: grey;
 }
-a {
-  color: whitesmoke;
+header {
+  background-color: rgb(44, 42, 42);
 }
-
 p {
   text-align: center;
   font-family: fantasy;
 }
-
+a {
+  color: white;
+}
+nav {
+  background-color: sandybrown;
+  color: white;
+}
+nav a {
+  text-align: inherit;
+  color: white;
+  margin-top:100px;
+}
 h1 {
   font-family: fantasy;
   text-align: center;
