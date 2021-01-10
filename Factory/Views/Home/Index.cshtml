@@ -6,20 +6,17 @@
 
 <h1>Welcome To The Factory</h1>
 
-<p>Currently Employed Engineers</p>
-
+<p class="titles">Currently Employed Engineers</p>
 @foreach (Engineer engineer in @Model["engineers"])
 {
   <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</li> 
 }
-
-<h4>All Machines</h4>
+<br>
+<p class="titles">All Machines</p>
 
 @foreach (Machine machine in @Model["machines"])
 {
   <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
 }
 
-
-<p>@Html.ActionLink("See all machines", "Index", "Machines")</p>
-<p>@Html.ActionLink("See all engineers", "Index", "Engineers")</p>
+<br>
