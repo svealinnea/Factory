@@ -116,14 +116,14 @@ Then open MySQL Workbench and select the Local instance 3306 server. You will ne
 1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. 
 2) Download a .zip copy the repository by clicking on the large green "Code" button near the upper right corner of the screen.
 3) Right click the .zip file and extract(unzip) it's contents.
-4) Open your computer's terminal/console, and navigate to folder called "__Template.Solution__". 
+4) Open your computer's terminal/console, and navigate to folder called "__Factory.Solution__". 
 
 
 **Option 2** (via git console/terminal)
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
 2) Type the following line of code into your terminal/console to automatically download the project to your current directory and hit return/enter
 
-    <code>git clone https://github.com/RMGit-it/Template.Solution.git</code>
+    <code>git clone https://github.com/svealinnea/Factory.git </code>
 
 3) Once the project has finished downloading, use the terminal/console to navigate to the “__Factory.Solution__" folder of the project.
 
@@ -156,7 +156,7 @@ You can now type the follow code to launch the program...
 
 <code>dotnet run</code>
 
-The program should launch using your default web browser at URL: localhost:5000.
+The program should launch using your default web browser at URL: localhost:5000. If you want to see styling you should open it in an incognito browser. 
 
 ## SQL Schema
 
