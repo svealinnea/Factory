@@ -1,3 +1,6 @@
+.jumbotron {
+  background-color: grey;
+}
 body{
   background-color: grey;
 }
@@ -6,21 +9,27 @@ header {
 }
 p {
   text-align: center;
-  font-family: fantasy;
 }
 a {
   color: white;
 }
 nav {
-  background-color: sandybrown;
+  background-color: rgb(65, 62, 62);
   color: white;
   padding: 10px 0;
 }
+
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} */
 
 nav a {
   text-align: inherit;
   color: white;
   margin-top:100px;
+  margin-left: 50px;
 }
 h1 {
   font-family: fantasy;

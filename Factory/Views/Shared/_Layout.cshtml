@@ -6,18 +6,22 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
-<body>
-<nav class="navbar navbar-dark bg-dark">
-    <div class="navbar-nav">
-      <ul>
-          <a class="nav-item nav-link active" href="/">  Home    <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="/engineers/create">   Add An Engineer   </a>
-          <a class="nav-item nav-link" href="/machines/create">   Add A New Machine   </a>
-      </ul>
-    </div>
-</nav>
-    <div class="container">
-      @RenderBody()
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-nav">
+          <ul>
+            <a class="nav-item nav-link active" href="/">  Home    <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/engineers/create">Add Engineers</a>
+            <a class="nav-item nav-link" href="/machines/create">Add Machines</a>
+            <a class="nav-item nav-link" href="/machines">Machines</a>
+            <a class="nav-item nav-link" href="/engineers">Engineers</a>
+          </ul>
+        </div>
+    </nav>
+    <body>
+    <div class="jumbotron">
+      <div class="container">
+        @RenderBody()
+      </div>
     </div>
   </body>
 </html>
