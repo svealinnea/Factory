@@ -9,15 +9,14 @@
 <p class="titles">Currently Employed Engineers: </p>
 @foreach (Engineer engineer in @Model["engineers"])
 {
-  <li>@($"{engineer.EngineerName}")</li> 
+  <li class="name">@($"{engineer.EngineerName}")</li> 
 }
 <br>
 <p class="titles">All Machines: </p>
 
 @foreach (Machine machine in @Model["machines"])
 {
-  <li>@($"{machine.MachineName}")</li>
+  <li class="name">@($"{machine.MachineName}")</li>
 }
 <br>
 
-  @* <li>@($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li> *@

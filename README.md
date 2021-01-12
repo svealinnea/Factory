@@ -17,7 +17,11 @@ This is an application to keep track of a companies machine repairs. It is an MV
 * I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it.
 
 
+## Usage / Examples
 
+Home page shows the current list of engineers and machines. Also has a nav bar for ease of use on each page. 
+The Home Page (localhost:5000/vendors)
+<img align="center" src="README/Homepage.png.png" alt="homepage">
 ## **Required for Use**
 * C# and .Net Core installed on your local machine. (Developed on .Net Core v2.2.4)
 * Console/Terminal access.
@@ -196,10 +200,6 @@ CREATE TABLE `Machines` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ```
-
-## Usage / Examples
-
-
 
 ## Technology Used
 * C# 7.3
